@@ -1,0 +1,8 @@
+const mongoose=require('mongoose');
+const userSchema=new mongoose.Schema({
+    name:{type: String, reqired:true},
+    email:{type: String, required:true,unique:true},
+    age:{type:Number}
+},{timestamps: true }); // Automatically adds createdAt and updatedAt
+const User = mongoose. model ('User', userSchema) ;
+module. exports = User;
